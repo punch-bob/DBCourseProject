@@ -1,0 +1,44 @@
+.wrapper {
+    width: 25vw;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.itemWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #76a9fb;
+    border: 2px solid #fd8ffd;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+.deleteIcon {
+    color: #fd8ffd;
+    cursor: pointer;
+}
+
+.editIcon {
+    cursor: pointer;
+}
+
+.itemText {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 5px;
+    width: 85%;
+}
+
+.itemPart {
+    border: 2px solid #e35dbf;
+    border-radius: 5px;
+}

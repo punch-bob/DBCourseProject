@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    gap: 1vh;
+    margin-bottom: 1vh;
+    color: #fd8ffd;
+}

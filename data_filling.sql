@@ -1,208 +1,190 @@
-insert all
-    into ATHLETE ("first_name", "last_name") values ('Константин', 'Рыбалко')
-    into ATHLETE ("first_name", "last_name") values ('Игорь', 'Архипов')
-    into ATHLETE ("first_name", "last_name") values ('Андрей', 'Корнещук')
-    into ATHLETE ("first_name", "last_name") values ('Андрей', 'Тамплон')
-    into ATHLETE ("first_name", "last_name") values ('Василий', 'Лопаткин')
-    into ATHLETE ("first_name", "last_name") values ('Тимур', 'Гуляев')
-    into ATHLETE ("first_name", "last_name") values ('Руслан', 'Мяхтиев')
-    into ATHLETE ("first_name", "last_name") values ('Руслан', 'Манеев')
-    into ATHLETE ("first_name", "last_name") values ('Вадим', 'Елуфимов')
-    into ATHLETE ("first_name", "last_name") values ('Максим', 'Муратов')
-select * from dual
+insert into athlete (first_name, last_name) 
+values ('Константин', 'Рыбалко'),
+	   ('Игорь', 'Архипов'),
+	   ('Андрей', 'Корнещук'),
+	   ('Андрей', 'Тамплон'),
+	   ('Василий', 'Лопаткин'),
+	   ('Тимур', 'Гуляев'),
+	   ('Руслан', 'Мяхтиев'),
+	   ('Руслан', 'Манеев'),
+	   ('Вадим', 'Елуфимов'),
+	   ('Максим', 'Муратов');
 
-insert all
-   into CLUB ("club_name") values ('АРЧ')
-   into CLUB ("club_name") values ('Форвард')
-   into CLUB ("club_name") values ('Фараон')
-   into CLUB ("club_name") values ('Исток')
-   into CLUB ("club_name") values ('Локомотив')
-   into CLUB ("club_name") values ('JAB')
-select * from dual
+insert into CLUB (club_name) 
+values ('АРЧ'),
+	   ('Форвард'),
+	   ('Фараон'),
+	   ('Исток'),
+	   ('Локомотив'),
+	   ('JAB');
 
-insert all
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (1, 1)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (1, 23)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (21, 1)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (22, 24)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (23, 24)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (22, 23)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (24, 21)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (25, 21)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (26, 21)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (27, 25)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (28, 22)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (29, 25)   
-    into ATHLETE_CLUB ("athlete_id", "club_id") values (21, 21)
-select * from dual
 
-insert all
-    into KIND_OF_SPORT ("sport_name") values ('Спортивная стрельба')
-    into KIND_OF_SPORT ("sport_name") values ('Кикбоксинг')
-    into KIND_OF_SPORT ("sport_name") values ('Фитнес')
-    into KIND_OF_SPORT ("sport_name") values ('Баскетбол')
-    into KIND_OF_SPORT ("sport_name") values ('Волейбол')
-select * from dual
+insert into ATHLETE_CLUB (athlete_id, club_id) 
+values (1, 1),
+       (1, 4),
+       (2, 1),
+       (3, 5),
+       (4, 5),
+       (3, 4),
+       (5, 2),
+       (6, 2),
+       (7, 2),
+       (8, 6),
+       (9, 3),
+       (10, 6),
+       (2, 2);
 
-insert all
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (1, 2, 6)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (1, 4, 3)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (21, 1, 7)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (22, 5, 5)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (23, 5, 4)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (22, 4, 3)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (21, 2, 2)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (24, 1, 7)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (25, 1, 1)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (26, 2, 6)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (27, 2, 4)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (28, 3, 8)
-    into ATHLETE_SPORT ("athlete_id", "sport_id", "athlete_rank") values (29, 3, 10)
-select * from dual
+insert into ATHLETE_SPORT (athlete_id, sport_id, athlete_rank) 
+values (1, 2, 6),
+	   (1, 4, 3),
+	   (2, 1, 7),
+	   (3, 5, 5),
+	   (4, 5, 4),
+	   (3, 4, 3),
+	   (2, 2, 2),
+	   (5, 1, 7),
+	   (6, 1, 1),
+	   (7, 2, 6),
+	   (8, 2, 4),
+	   (9, 3, 8),
+	   (10, 3, 10);
 
-insert all
-    into COACH ("first_name", "last_name", "sport_id") values ('Никита', 'Попов', 4)
-    into COACH ("first_name", "last_name", "sport_id") values ('Николай', 'Макаров', 2)
-    into COACH ("first_name", "last_name", "sport_id") values ('Павел', 'Дмитренко', 3)
-    into COACH ("first_name", "last_name", "sport_id") values ('Петр', 'Поморцев', 1)
-    into COACH ("first_name", "last_name", "sport_id") values ('Григорий', 'Опарин', 5)
-select * from dual
 
-insert all
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (1, 1)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (1, 2)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (21, 2)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (21, 4)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (22, 1)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (22, 5)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (23, 5)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (24, 4)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (25, 4)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (26, 2)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (27, 2)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (28, 3)
-    into ATHLETE_COACH ("athlete_id", "coach_id") values (29, 3)
-select * from dual
+insert into COACH (first_name, last_name, sport_id) 
+values ('Никита', 'Попов', 4),
+	   ('Николай', 'Макаров', 2),
+	   ('Павел', 'Дмитренко', 3),
+	   ('Петр', 'Поморцев', 1),
+	   ('Григорий', 'Опарин', 5);
 
-insert all
-    into COATING_TYPE ("coating_type_name") values ('Резина')
-    into COATING_TYPE ("coating_type_name") values ('Газон')
-    into COATING_TYPE ("coating_type_name") values ('Паркет')
-    into COATING_TYPE ("coating_type_name") values ('Татами')
-    into COATING_TYPE ("coating_type_name") values ('Канвас')
-    into COATING_TYPE ("coating_type_name") values ('Грунт')
-select * from dual
+insert into ATHLETE_COACH (athlete_id, coach_id) 
+values (1, 1),
+	   (1, 2),
+	   (2, 2),
+	   (2, 4),
+	   (3, 1),
+	   (3, 5),
+	   (4, 5),
+	   (5, 4),
+	   (6, 4),
+	   (7, 2),
+	   (8, 2),
+	   (9, 3),
+	   (10, 3);
 
-insert all
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (1000, 5, 230)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity", "track_length") values (10000, 6, 100, 800)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (525, 5, 170)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (2000, 3, 130)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (1500, 2, 200)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity", "track_length") values (1500, 1, 150, 400)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (5000, 4, 100)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (1000, 3, 300)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (500, 1, 50)
-    into ATTRIBUTE ("capacity", "coating_type_id", "participants_capacity") values (1000, 6, 110)
-    into ATTRIBUTE ("coating_type_id", "participants_capacity") values (1, 100)
-select * from dual
+insert into COATING_TYPE (coating_type_name) 
+values ('Резина'),
+	   ('Газон'),
+	   ('Паркет'),
+	   ('Татами'),
+	   ('Канвас'),
+	   ('Грунт');
 
-insert all
-    into TYPE_OF_FACILITY ("name") values ('Ипподром')
-    into TYPE_OF_FACILITY ("name") values ('Стрельбище')
-    into TYPE_OF_FACILITY ("name") values ('Футбольное поле')
-    into TYPE_OF_FACILITY ("name") values ('Игровой зал')
-    into TYPE_OF_FACILITY ("name") values ('Тренажерный зал')
-    into TYPE_OF_FACILITY ("name") values ('Беговая дорожка')
-    into TYPE_OF_FACILITY ("name") values ('Борцовский зал')
-    into TYPE_OF_FACILITY ("name") values ('Ринг')
-    into TYPE_OF_FACILITY ("name") values ('Зал восточных единоборств')
-select * from dual
+insert into ATTRIBUTE (capacity, coating_type_id, participants_capacity, track_length) 
+values (1000, 5, 230, null),
+	   (10000, 6, 100, 800),
+	   (525, 5, 170, null),
+	   (2000, 3, 130, null),
+	   (1500, 2, 200, null),
+	   (1500, 1, 150, 400),
+	   (5000, 4, 100, null),
+	   (1000, 3, 300, null),
+	   (500, 1, 50, null),
+	   (1000, 6, 110, null),
+	   (1, null, 100, null);
 
-insert all
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (1, 'Атом', 8)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (2, 'Новосибирский ипподром', 1)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (3, 'Флагман', 8)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (4, 'Дворец спорта', 4)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (5, 'Zабей', 3)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (6, 'Zабей', 6)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (7, 'Тайфун', 9)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (8, 'Колумб', 4)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (9, '727°С', 2)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (10, 'Кантрипарк', 2)
-    into SPORTS_FACILITY ("attribute_id", "facility_name", "facility_type_id") values (11, 'Европа', 5)
-select * from dual
 
-insert all
-    into KIND_OF_SPORT ("sport_name") values ('Спортивная стрельба')
-    into KIND_OF_SPORT ("sport_name") values ('Кикбоксинг')
-    into KIND_OF_SPORT ("sport_name") values ('Фитнес')
-    into KIND_OF_SPORT ("sport_name") values ('Баскетбол')
-    into KIND_OF_SPORT ("sport_name") values ('Волейбол')
-    into KIND_OF_SPORT ("sport_name") values ('Скачки')
-    into KIND_OF_SPORT ("sport_name") values ('Футбол')
-    into KIND_OF_SPORT ("sport_name") values ('Мини футбол')
-    into KIND_OF_SPORT ("sport_name") values ('Бег')
-select * from dual
+insert into TYPE_OF_FACILITY (type_name) 
+values ('Ипподром'),
+	   ('Стрельбище'),
+	   ('Футбольное поле'),
+	   ('Игровой зал'),
+	   ('Тренажерный зал'),
+	   ('Беговая дорожка'),
+	   ('Борцовский зал'),
+	   ('Ринг'),
+	   ('Зал восточных единоборств');
 
-insert all
-    into FACILITY_SPORT ("facility_id", "sport_id") values (1, 2)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (2, 21)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (3, 2)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (4, 4)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (4, 5)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (4, 23)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (5, 22)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (6, 24)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (7, 2)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (8, 4)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (8, 5)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (8, 23)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (9, 1)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (10, 1)
-    into FACILITY_SPORT ("facility_id", "sport_id") values (11, 3)
-select * from dual
+insert into SPORTS_FACILITY (attribute_id, facility_name, facility_type_id) 
+values (1, 'Атом', 8),
+	   (2, 'Новосибирский ипподром', 1),
+	   (3, 'Флагман', 8),
+	   (4, 'Дворец спорта', 4),
+	   (5, 'Zабей', 3),
+	   (6, 'Заря', 6),
+	   (7, 'Тайфун', 9),
+	   (8, 'Колумб', 4),
+	   (9, '727°С', 2),
+	   (10, 'Кантрипарк', 2),
+	   (11, 'Европа', 5);
 
-insert all
-    into ORGANIZER ("organizer_name") values ('Федерация кикбоксинга России')
-    into ORGANIZER ("organizer_name") values ('Волейбольный клуб Локомотив-Новосибирск')
-    into ORGANIZER ("organizer_name") values ('РЖД')
-    into ORGANIZER ("organizer_name") values ('Федерация баскетбола Новосибирской области')
-    into ORGANIZER ("organizer_name") values ('Департамент ФК и спорта Новосибирской области')
-select * from dual
+insert into KIND_OF_SPORT (sport_name) 
+values ('Спортивная стрельба'),
+	   ('Кикбоксинг'),
+	   ('Фитнес'),
+	   ('Баскетбол'),
+	   ('Волейбол'),
+	   ('Скачки'),
+	   ('Футбол'),
+	   ('Мини футбол'),
+	   ('Бег');
 
-insert all
-    into COMPETITION ("sport_id", "facility_id", "start_date", "end_date", "competition_name") values (1, 9, TIMESTAMP '2022-08-08 9:00:00 +7:00', TIMESTAMP '2022-08-11 18:00:00 +7:00', 'Чемпионат России по спортивной стрельбе 2022 год')
-    into COMPETITION ("sport_id", "facility_id", "start_date", "end_date", "competition_name") values (2, 1, TIMESTAMP '2023-03-24 8:00:00 +3:00', TIMESTAMP '2023-03-31 20:30:00 +3:00', 'Чемпионат и первенство СФО по кикбоксингу 2023 год')
-    into COMPETITION ("sport_id", "facility_id", "start_date", "end_date", "competition_name") values (2, 1, TIMESTAMP '2022-03-20 9:00:00 +5:00', TIMESTAMP '2022-03-27 21:00:00 +5:00', 'Чемпионат и первенство СФО по кикбоксингу 2022 год')
-    into COMPETITION ("sport_id", "facility_id", "start_date", "end_date", "competition_name") values (4, 4, TIMESTAMP '2012-11-08 8:30:00 +6:00', TIMESTAMP '2012-11-08 18:00:00 +6:00', 'Чемпионат школьной баскетбольной лиги КЭС-БАСКЕТ')
-    into COMPETITION ("sport_id", "facility_id", "start_date", "end_date", "competition_name") values (5, 8, TIMESTAMP '2023-02-20 13:00:00 +7:00', TIMESTAMP '2023-02-20 19:30:00 +7:00', 'Чемпионат НСО по волейболу 2023 год')
-select * from dual
 
-insert all
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (15, 41)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (11, 42)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (15, 42)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (11, 43)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (14, 44)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (13, 45)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (15, 45)
-    into COMPETITION_ORGANIZER ("organizer_id", "competition_id") values (12, 45)
-select * from dual
+insert into FACILITY_SPORT (facility_id, sport_id) 
+values (1, 2),
+	   (2, 6),
+	   (3, 2),
+	   (4, 4),
+	   (4, 5),
+	   (4, 8),
+	   (5, 7),
+	   (6, 9),
+	   (7, 2),
+	   (8, 4),
+	   (8, 5),
+	   (8, 8),
+	   (9, 1),
+	   (10, 1),
+	   (11, 3);
 
-insert all
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (41, 21, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (41, 24, 2)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (41, 25, 3)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (42, 1, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (42, 21, 4)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (42, 26, 2)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (42, 27, 3)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (43, 1, 2)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (43, 26, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (43, 27, 3)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (44, 1, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (44, 22, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (45, 22, 1)
-    into COMPETITION_ATHLETE ("competition_id", "athlete_id", "place") values (45, 23, 1)
-select * from dual
+insert into ORGANIZER (organizer_name) 
+values ('Федерация кикбоксинга России'),
+	   ('Волейбольный клуб Локомотив-Новосибирск'),
+	   ('РЖД'),
+	   ('Федерация баскетбола Новосибирской области'),
+	   ('Департамент ФК и спорта Новосибирской области');
+
+insert into COMPETITION (sport_id, facility_id, start_date, end_date, competition_name) 
+values (1, 9, '2022-08-08 9:00:00', '2022-08-11 18:00:00', 'Чемпионат России по спортивной стрельбе 2022 год'),
+	   (2, 1, '2023-03-24 8:00:00', '2023-03-31 20:30:00', 'Чемпионат и первенство СФО по кикбоксингу 2023 год'),
+	   (2, 1, '2022-03-20 9:00:00', '2022-03-27 21:00:00', 'Чемпионат и первенство СФО по кикбоксингу 2022 год'),
+	   (4, 4, '2012-11-08 8:30:00', '2012-11-08 18:00:00', 'Чемпионат школьной баскетбольной лиги КЭС-БАСКЕТ'),
+	   (5, 8, '2023-02-20 13:00:00', '2023-02-20 19:30:00', 'Чемпионат НСО по волейболу 2023 год');
+
+
+insert into COMPETITION_ORGANIZER (organizer_id, competition_id) 
+values (5, 1),
+	   (1, 2),
+	   (5, 2),
+	   (1, 3),
+	   (4, 4),
+	   (3, 5),
+	   (5, 5),
+	   (2, 5);
+
+
+insert into COMPETITION_ATHLETE (competition_id, athlete_id, place) 
+values (1, 2, 1),
+	   (1, 5, 2),
+	   (1, 6, 3),
+	   (2, 1, 1),
+	   (2, 2, 4),
+	   (2, 7, 2),
+	   (2, 8, 3),
+	   (3, 1, 2),
+	   (3, 7, 1),
+	   (3, 8, 3),
+	   (4, 1, 1),
+	   (4, 3, 1),
+	   (5, 3, 1),
+	   (5, 4, 1);

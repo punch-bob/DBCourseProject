@@ -100,7 +100,7 @@ with TMP as (
     group by ORGANIZER."organizer_id"
 )
 
-select ORGANIZER."organizer_name", nvl(TMP."number_of_competition", 0) "number_of_competition" from ORGANIZER
+select ORGANIZER."organizer_name", COALESCE(TMP."number_of_competition", 0) "number_of_competition" from ORGANIZER
 left outer join TMP on ORGANIZER."organizer_id" = TMP."organizer_id"
 
 

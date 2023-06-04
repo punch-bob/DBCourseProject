@@ -1,0 +1,15 @@
+.transparentButton {
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fd8ffd;
+    padding: 0;
+    width: fit-content;
+}
+
+.transparentButton:disabled {
+    cursor: default;
+    color: rgba(253, 143, 253, .5);
+}

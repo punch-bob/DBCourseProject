@@ -1,0 +1,32 @@
+.inputWrapper {
+    padding: 2% 4%;   
+    background: white;
+    border: 2px solid rgb(253, 143, 253);
+    box-shadow: 0px 4px 4px rgba(118, 169, 251, .25);
+    border-radius: 5px;
+    display: flex;
+    width: 91%;
+}
+
+.inputWrapper input {
+    flex: 2;
+    width: 95%;
+    outline: none;
+    background-color: white;
+    border: hidden;
+    font-size: 1.02rem;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.inputWrapper input:focus {
+    outline: none;
+}
+
+
+.passwordBtn {
+    cursor: pointer;
+
+}
